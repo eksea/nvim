@@ -37,5 +37,8 @@ vim:
 ## 关于快捷键
 详见init.vim
 
-## 目前比较简陋，需要逐步完善
+## 补充说明
+ccls会在项目根目录查找`compile_commands.json`(通过`cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=1`生成)，所以推荐做法是将build目录的`compile_commands.json`软链接到项目根目录。
+
+`ln -s build/compile_commands.json .`
 
