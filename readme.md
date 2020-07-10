@@ -21,7 +21,7 @@ nvim:
 
 vim:
   1. `cp init.vim ~/.vimrc`
-  2. `cp coc-settings.json `
+  2. `cp coc-settings.json ~/.vim/`
 
 #### 4. 安装插件
 `:PlugInstall`
