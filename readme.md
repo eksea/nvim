@@ -35,6 +35,20 @@ vim:
 `:CocInstall coc-lists`
 
 ## 关于快捷键
+leader key是空格
+coc预览窗口上翻和下翻：`C-j` 和 `C-k`
+#### 各种跳转
+跳转到定义：`gd`
+回跳：`C-o`
+全局查找符号：`<leader>s`
+全局查找文件：`<leader>g`
+显示当前文件的outline：`<leader>o`
+全局替换符号：`<leader>rn`
+显示已打开的文件列表：`<leader>b`
+#### defx
+打开/关闭文件树：`<leader>ff`
+打开文件以及展开/合并文件夹: `o`
+
 详见init.vim
 
 ## 补充说明

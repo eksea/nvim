@@ -13,6 +13,7 @@ set number
 set encoding=utf-8
 " use space as leader key
 let mapleader = " "
+set cursorline
 " ================================ eksea config end ================================
 
 " ================================ defx config begin ================================
