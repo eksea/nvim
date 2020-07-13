@@ -17,6 +17,16 @@ let mapleader = " "
 set cursorline
 " ================================ eksea config end ================================
 
+" ================================ ack config begin ================================
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
+
+" 不自动打开第一个搜索结果
+cnoreabbrev Ack Ack!
+nnoremap <leader>a :Ack<space>
+" ================================ ack config begin ================================
+
 " ================================ defx config begin ================================
 nnoremap <silent> <leader>ff :Defx<CR>
 call defx#custom#option('_', {
@@ -143,11 +153,12 @@ augroup end
 
 " Applying codeAction to the selected region.
 " Example: `<leader>aap` for current paragraph
-xmap <leader>a  <Plug>(coc-codeaction-selected)
-nmap <leader>a  <Plug>(coc-codeaction-selected)
+" 暂时没用到，把快捷键<leader>a让给ag用
+" xmap <leader>a  <Plug>(coc-codeaction-selected)
+" nmap <leader>a  <Plug>(coc-codeaction-selected)
 
 " Remap keys for applying codeAction to the current line.
-nmap <leader>ac  <Plug>(coc-codeaction)
+" nmap <leader>ac  <Plug>(coc-codeaction)
 " Apply AutoFix to problem on the current line.
 nmap <leader>qf  <Plug>(coc-fix-current)
 
@@ -183,23 +194,23 @@ set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
 " Mappings using CoCList:
 " Show all diagnostics.
-nnoremap <silent> <space>a  :<C-u>CocList diagnostics<cr>
+nnoremap <silent> <leader>d  :<C-u>CocList diagnostics<cr>
 " Manage extensions.
-nnoremap <silent> <space>e  :<C-u>CocList extensions<cr>
+nnoremap <silent> <leader>e  :<C-u>CocList extensions<cr>
 " Show commands.
-nnoremap <silent> <space>c  :<C-u>CocList commands<cr>
+nnoremap <silent> <leader>c  :<C-u>CocList commands<cr>
 " Find symbol of current document.
-nnoremap <silent> <space>o  :<C-u>CocList outline<cr>
+nnoremap <silent> <leader>o  :<C-u>CocList outline<cr>
 " Search workspace symbols.
-nnoremap <silent> <space>s  :<C-u>CocList -I symbols<cr>
+nnoremap <silent> <leader>s  :<C-u>CocList -I symbols<cr>
 " Do default action for next item.
-nnoremap <silent> <space>j  :<C-u>CocNext<CR>
+nnoremap <silent> <leader>j  :<C-u>CocNext<CR>
 " Do default action for previous item.
-nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
+nnoremap <silent> <leader>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
-nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
+nnoremap <silent> <leader>p  :<C-u>CocListResume<CR>
 " Show buffers
-nnoremap <silent> <space>b :<C-u>CocList buffers<cr>
+nnoremap <silent> <leader>b :<C-u>CocList buffers<cr>
 " search files
-nnoremap <silent> <space>g :<C-u>CocList files<cr>
+nnoremap <silent> <leader>g :<C-u>CocList files<cr>
 " ================================ coc.vim config end ================================
