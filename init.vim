@@ -1,8 +1,9 @@
 call plug#begin('~/.vim/plugged')
 
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'mileszs/ack.vim'
 Plug 'Shougo/defx.nvim', {'do': ':UpdateRemotePlugins'}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'vim-airline/vim-airline'
 
 call plug#end()
 
