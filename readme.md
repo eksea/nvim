@@ -1,4 +1,4 @@
-# 要求
+## 要求
 1. vim/nvim
 - vim >= 8.1 且 enable +python feature
 - nvim >= 0.3.0
@@ -21,7 +21,7 @@ nvim:
 
 vim:
   1. `cp init.vim ~/.vimrc`
-  2. `cp coc-settings.json `
+  2. `cp coc-settings.json ~/.vim/`
 
 #### 4. 安装插件
 `:PlugInstall`
