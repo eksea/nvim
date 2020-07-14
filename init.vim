@@ -1,9 +1,11 @@
 call plug#begin('~/.vim/plugged')
 
 Plug 'mileszs/ack.vim'
-Plug 'Shougo/defx.nvim', {'do': ':UpdateRemotePlugins'}
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'Shougo/defx.nvim', {'do': ':UpdateRemotePlugins'}
 Plug 'vim-airline/vim-airline'
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
 
 call plug#end()
 
@@ -15,7 +17,16 @@ set encoding=utf-8
 " use space as leader key
 let mapleader = " "
 set cursorline
+" highlight CursorLine term=bold cterm=bold guibg=#073e5b ctermbg=darkblue
 " ================================ eksea config end ================================
+
+
+" ================================ git config begin ================================
+highlight DiffAdd    cterm=bold ctermfg=161 ctermbg=17 gui=none guifg=bg guibg=Red
+highlight DiffDelete cterm=bold ctermfg=161 ctermbg=17 gui=none guifg=bg guibg=Red
+highlight DiffChange cterm=bold ctermfg=161 ctermbg=17 gui=none guifg=bg guibg=Red
+highlight DiffText   cterm=bold ctermfg=161 ctermbg=17 gui=none guifg=bg guibg=Red
+" ================================ git config end ================================
 
 " ================================ ack config begin ================================
 if executable('ag')
@@ -25,7 +36,7 @@ endif
 " 不自动打开第一个搜索结果
 cnoreabbrev Ack Ack!
 nnoremap <leader>a :Ack<space>
-" ================================ ack config begin ================================
+" ================================ ack config end ================================
 
 " ================================ defx config begin ================================
 nnoremap <silent> <leader>ff :Defx<CR>
