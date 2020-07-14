@@ -43,7 +43,7 @@ nnoremap <silent> <leader>ff :Defx<CR>
 call defx#custom#option('_', {
       \ 'winwidth': 30,
       \ 'split': 'vertical',
-      \ 'direction': 'botright',
+      \ 'direction': 'topleft',
       \ 'show_ignored_files': 1,
       \ 'buffer_name': '',
       \ 'toggle': 1,
