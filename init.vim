@@ -6,11 +6,16 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
+Plug 'Yggdroot/indentLine'
 Plug 'Yggdroot/LeaderF', { 'do': '.\install.bat' }
 
 call plug#end()
 
 " ================================ eksea config begin ================================
+set tabstop=2
+set softtabstop=0 expandtab
+set shiftwidth=2
+
 syntax on
 inoremap jk <esc>
 set number
@@ -19,6 +24,9 @@ set encoding=utf-8
 let mapleader = " "
 set cursorline
 highlight CursorLine term=bold cterm=bold guibg=#073e5b ctermbg=0
+
+inoremap <expr> <C-j> pumvisible() ? "\<C-N>" : "\<C-j>"
+inoremap <expr> <C-k> pumvisible() ? "\<C-P>" : "\<C-k>"
 " ================================ eksea config end ================================
 
 " ================================ leaderF config begin ================================
