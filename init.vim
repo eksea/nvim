@@ -1,11 +1,12 @@
 call plug#begin('~/.vim/plugged')
 
+Plug 'airblade/vim-gitgutter'
 Plug 'mileszs/ack.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'Shougo/defx.nvim', {'do': ':UpdateRemotePlugins'}
-Plug 'vim-airline/vim-airline'
+Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'tpope/vim-fugitive'
-Plug 'airblade/vim-gitgutter'
+Plug 'vim-airline/vim-airline'
+Plug 'Yggdroot/LeaderF', { 'do': '.\install.bat' }
 
 call plug#end()
 
@@ -17,9 +18,13 @@ set encoding=utf-8
 " use space as leader key
 let mapleader = " "
 set cursorline
-" highlight CursorLine term=bold cterm=bold guibg=#073e5b ctermbg=darkblue
+highlight CursorLine term=bold cterm=bold guibg=#073e5b ctermbg=0
 " ================================ eksea config end ================================
 
+" ================================ leaderF config begin ================================
+nnoremap <leader>f :LeaderfFile<CR>
+nnoremap <leader>b :LeaderfBuffer<CR>
+" ================================ leaderF config end ================================
 
 " ================================ git config begin ================================
 highlight DiffAdd    cterm=bold ctermfg=161 ctermbg=17 gui=none guifg=bg guibg=Red
@@ -39,7 +44,7 @@ nnoremap <leader>a :Ack<space>
 " ================================ ack config end ================================
 
 " ================================ defx config begin ================================
-nnoremap <silent> <leader>ff :Defx<CR>
+nnoremap <silent> <leader>dd :Defx<CR>
 call defx#custom#option('_', {
       \ 'winwidth': 30,
       \ 'split': 'vertical',
@@ -151,8 +156,8 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 nmap <leader>rn <Plug>(coc-rename)
 
 " Formatting selected code.
-xmap <leader>f  <Plug>(coc-format-selected)
-nmap <leader>f  <Plug>(coc-format-selected)
+" xmap <leader>f  <Plug>(coc-format-selected)
+" nmap <leader>f  <Plug>(coc-format-selected)
 
 augroup mygroup
   autocmd!
@@ -205,7 +210,7 @@ set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
 " Mappings using CoCList:
 " Show all diagnostics.
-nnoremap <silent> <leader>d  :<C-u>CocList diagnostics<cr>
+" nnoremap <silent> <leader>d  :<C-u>CocList diagnostics<cr>
 " Manage extensions.
 nnoremap <silent> <leader>e  :<C-u>CocList extensions<cr>
 " Show commands.
@@ -221,7 +226,7 @@ nnoremap <silent> <leader>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent> <leader>p  :<C-u>CocListResume<CR>
 " Show buffers
-nnoremap <silent> <leader>b :<C-u>CocList buffers<cr>
+" nnoremap <silent> <leader>b :<C-u>CocList buffers<cr>
 " search files
 nnoremap <silent> <leader>g :<C-u>CocList files<cr>
 " ================================ coc.vim config end ================================

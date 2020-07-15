@@ -45,11 +45,14 @@ vim:
 - 全局查找文件：`<leader>g`
 - 显示当前文件的outline：`<leader>o`
 - 全局替换符号：`<leader>rn`
-- 显示已打开的文件列表：`<leader>b`
 
 #### defx
-- 打开/关闭文件树：`<leader>ff`
+- 打开/关闭文件树：`<leader>dd`
 - 打开文件以及展开/合并文件夹: `o`
+
+#### leaderF
+- 全速打开文件：`<leader>ff`
+- 显示已打开的文件列表(bffer list)：`<leader>b`
 
 #### ag
 - 全局搜索：`<leader>a`
