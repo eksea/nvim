@@ -9,6 +9,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 Plug 'Yggdroot/indentLine'
 Plug 'Yggdroot/LeaderF', { 'do': '.\install.bat' }
+Plug 'preservim/nerdcommenter'
 
 call plug#end()
 
@@ -29,6 +30,13 @@ highlight CursorLine term=bold cterm=bold guibg=#073e5b ctermbg=0
 inoremap <expr> <C-j> pumvisible() ? "\<C-N>" : "\<C-j>"
 inoremap <expr> <C-k> pumvisible() ? "\<C-P>" : "\<C-k>"
 " ================================ eksea config end ================================
+
+" ================================ commenter config end ================================
+let g:NERDCreateDefaultMappings=0
+let g:NERDSpaceDelims=1
+nnoremap <leader>cc :call NERDComment(0, "toggle")<CR>
+vnoremap <leader>cc :call NERDComment(0, "toggle")<CR>
+" ================================ commenter config end ================================
 
 " ================================ leaderF config begin ================================
 nnoremap <leader>f :LeaderfFile<CR>
