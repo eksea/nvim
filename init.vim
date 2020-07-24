@@ -1,6 +1,7 @@
 call plug#begin('~/.vim/plugged')
 
 Plug 'airblade/vim-gitgutter'
+Plug 'ayu-theme/ayu-vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'mileszs/ack.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -14,6 +15,11 @@ Plug 'preservim/nerdcommenter'
 call plug#end()
 
 " ================================ eksea config begin ================================
+
+set termguicolors
+let ayucolor="mirage"
+colorscheme ayu
+
 set tabstop=2
 set softtabstop=0 expandtab
 set shiftwidth=2
