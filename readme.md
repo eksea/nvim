@@ -64,3 +64,6 @@ ccls会在项目根目录查找`compile_commands.json`(通过`cmake -DCMAKE_EXPO
 
 `ln -s build/compile_commands.json .`
 
+## 问题记录
+1. 如果加载defx时提示缺少python3 feature,则执行：`python3 -m pip install --user --upgrade pynvim`
+
