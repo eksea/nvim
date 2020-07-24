@@ -70,7 +70,7 @@ nnoremap <leader>gf :AckFile<space>
 " ================================ defx config begin ================================
 nnoremap <silent> <leader>dd :Defx<CR>
 call defx#custom#option('_', {
-      \ 'winwidth': 30,
+      \ 'winwidth': 35,
       \ 'split': 'vertical',
       \ 'direction': 'topleft',
       \ 'show_ignored_files': 1,
