@@ -64,6 +64,7 @@ endif
 " 不自动打开第一个搜索结果
 cnoreabbrev Ack Ack!
 nnoremap <leader>a :Ack<space>
+nnoremap <leader>gf :AckFile<space>
 " ================================ ack config end ================================
 
 " ================================ defx config begin ================================
@@ -251,5 +252,5 @@ nnoremap <silent> <leader>p  :<C-u>CocListResume<CR>
 " Show buffers
 " nnoremap <silent> <leader>b :<C-u>CocList buffers<cr>
 " search files
-nnoremap <silent> <leader>g :<C-u>CocList files<cr>
+nnoremap <silent> <leader>gg :<C-u>CocList files<cr>
 " ================================ coc.vim config end ================================
