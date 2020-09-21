@@ -24,8 +24,8 @@ set tabstop=2
 set softtabstop=0 expandtab
 set shiftwidth=2
 
-syntax on
-inoremap jk <esc>
+" syntax on
+" inoremap jk <esc>
 set number
 set encoding=utf-8
 " use space as leader key
@@ -35,6 +35,13 @@ highlight CursorLine term=bold cterm=bold guibg=#073e5b ctermbg=0
 
 inoremap <expr> <C-j> pumvisible() ? "\<C-N>" : "\<C-j>"
 inoremap <expr> <C-k> pumvisible() ? "\<C-P>" : "\<C-k>"
+
+packadd termdebug
+let g:termdebug_wide=163
+" nnoremap <leader>td :Termdebug<cr>
+nnoremap <f5> :Termdebug<cr>
+tnoremap <esc> <c-\><c-n>
+
 " ================================ eksea config end ================================
 
 " ================================ commenter config end ================================
@@ -113,7 +120,7 @@ set nobackup
 set nowritebackup
 
 " Give more space for displaying messages.
-set cmdheight=2
+" set cmdheight=2
 
 " Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
 " delays and poor user experience.
