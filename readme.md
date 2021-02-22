@@ -14,6 +14,11 @@
 1. nvim: `cp third/plug.vim ~/.local/share/nvim/site/autoload/`
 2. vim: `cp third/plug.vim ~/.vim/autoload/`
 
+> install nvim with python3 supported:
+> 1. brew install --HEAD nvim
+> 2. brew install python3
+> 3. pip3 install neovim --upgrade
+
 #### 3. 拷贝vim配置文件
 nvim:
   1. `cp init.vim ~/.config/nvim/`
