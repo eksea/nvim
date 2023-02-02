@@ -11,14 +11,16 @@ Plug 'vim-airline/vim-airline'
 Plug 'Yggdroot/indentLine'
 Plug 'Yggdroot/LeaderF', { 'do': '.\install.bat' }
 Plug 'preservim/nerdcommenter'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'NLKNguyen/papercolor-theme'
 
 call plug#end()
 
 " ================================ eksea config begin ================================
 
-set termguicolors
-let ayucolor="mirage"
-colorscheme ayu
+" set termguicolors
+" let ayucolor="light"
+colorscheme PaperColor
 
 set tabstop=2
 set softtabstop=0 expandtab
@@ -43,6 +45,7 @@ nnoremap <f5> :Termdebug<cr>
 tnoremap <esc> <c-\><c-n>
 
 " ================================ eksea config end ================================
+nnoremap <leader>t :terminal<CR>
 
 " ================================ commenter config end ================================
 let g:NERDCreateDefaultMappings=0
@@ -243,6 +246,7 @@ set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 " Show all diagnostics.
 " nnoremap <silent> <leader>d  :<C-u>CocList diagnostics<cr>
 " Manage extensions.
+nnoremap <silent> <leader>gc  :<C-u>CocList <cr>
 nnoremap <silent> <leader>e  :<C-u>CocList extensions<cr>
 " Show commands.
 nnoremap <silent> <leader>c  :<C-u>CocList commands<cr>
