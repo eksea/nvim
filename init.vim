@@ -50,8 +50,8 @@ nnoremap <leader>t :terminal<CR>
 " ================================ commenter config end ================================
 let g:NERDCreateDefaultMappings=0
 let g:NERDSpaceDelims=1
-nnoremap <leader>cc :call NERDComment(0, "toggle")<CR>
-vnoremap <leader>cc :call NERDComment(0, "toggle")<CR>
+nnoremap <leader>cc :call nerdcommenter#Comment(0, "toggle")<CR>
+vnoremap <leader>cc :call nerdcommenter#Comment(0, "toggle")<CR>
 " ================================ commenter config end ================================
 
 " ================================ leaderF config begin ================================
